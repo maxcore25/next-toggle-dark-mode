@@ -1,21 +1,21 @@
-import { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-export default function Document() {
-  return (
-    <Html>
-      <Head />
-      <body>
-        <script>
-          dangerouslySetInnerHTML=
-          {{
-            __html: themeInitializerScript,
-          }}
-        </script>
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
-  );
+class MyDocument extends Document {
+  render() {
+    return (
+      <Html lang='en'>
+        <Head></Head>
+        <body>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: themeInitializerScript,
+            }}></script>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }
 
 // This function needs to be a String
@@ -54,3 +54,5 @@ function setInitialColorMode() {
   if (currentColorMode === 'dark')
     document.documentElement.setAttribute('data-theme', 'dark');
 }
+
+export default MyDocument;
