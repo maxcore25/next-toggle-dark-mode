@@ -55,7 +55,7 @@ export default function Home() {
             <h1>👋 Hello World</h1>
             <h3>I am a web developer</h3>
             <p>
-              You can find me on
+              You can find me on{' '}
               <span>
                 <a
                   href='https://github.com/maxcore25'
@@ -63,7 +63,7 @@ export default function Home() {
                   rel='noreferrer'>
                   GitGub
                 </a>
-              </span>
+              </span>{' '}
               Lorem ipsum dolor sit amet
             </p>
             <button className='primary-btn'>Connect with me</button>
