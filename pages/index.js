@@ -66,7 +66,9 @@ export default function Home() {
               </span>{' '}
               Lorem ipsum dolor sit amet
             </p>
-            <button className='primary-btn'>Connect with me</button>
+            <a href='https://maxcore25.vercel.app' className='primary-btn'>
+              My portfolio
+            </a>
           </div>
         </section>
       </div>
